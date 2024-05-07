@@ -1,5 +1,6 @@
-from django.urls import path
-from .import views
+from django.urls import include, path
+from . import views
+
 
 
 # # from api.views import singnup, index
@@ -9,12 +10,17 @@ from .import views
 
 # app_name = "api"
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('singnup/',views. singnup, name='singnup'),
-    path('register/', views.Registration, name="Register"),
-    path('',views.getusers),
-    path('create',views.adduser),
+    # path('', views.index, name='index'),
+    # path('singnup/',views.singnup, name='singnup'),
+    # path('register/', views.adduser, name="Register"),
+    # path('',views.getuser),
+    # path('read/<str:pk>', views.getuser),
+    # path('', views.api_view, name='home'),
+
+    path ('',views.getuser),
+    path ('create/',views.add_user,name='adduser'),
     path('read/<str:pk>', views.getuser),
+
 
 ]
 

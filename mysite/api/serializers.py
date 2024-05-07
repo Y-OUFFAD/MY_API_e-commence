@@ -1,13 +1,15 @@
-from django.db.models import fields
+# from django.db.models import fields
 from rest_framework import serializers
-from .models import user,product  
- 
-class userSerializer(serializers.ModelSerializer):
-     class Meta:
-         model = user
-         fields = ('id', 'username', 'password', 'email')
+from .models import CustomUser
 
-class productSerializer(serializers.ModelSerializer):
-     class Meta:
-         model = product
-         fields = ('id', 'name', 'description')       
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ('id', 'email', 'username')
+        extra_kwargs = {'password': {'write_only': True}}
+
+
+# class productSerializer(serializers.ModelSerializer):
+#      class Meta:
+#          model = product
+#          fields = ('id', 'name', 'description')       
