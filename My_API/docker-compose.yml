@@ -1,11 +1,10 @@
-yversion: '3'
-
 services:
   api:
     build:
-      context: ./MY_API
+      context: .
     ports:
       - "5000:5000"
+    command: python manage.py runserver
     depends_on:
       - db
     environment:
