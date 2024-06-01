@@ -4,7 +4,7 @@ export default function login() {
   return (
     <div>
      {/*
-  Heads up! 👋
+  Heads up! 
 
   Plugins:
     - @tailwindcss/forms
