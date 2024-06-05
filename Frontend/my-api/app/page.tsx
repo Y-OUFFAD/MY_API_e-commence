@@ -1,68 +1,28 @@
+import React from "react";
+import Header from "@/compments/Header";
 
-
-import React from 'react';
-
-export default function Page() {
+export default function Home() {
   return (
-    <div className="bg-[#800020] min-h-screen"> 
-      <header className="bg-orange-400">
-        <div className="mx-auto max-w-screen-x1 px-4 sm:px-6 lg:px-0">
-          <div className="flex h-20 items-center justify-between">
-            <div className="flex items-center gap-4">
-              <img src="/image/logo4.png" alt="Logo" className="h-20" style={{marginTop: '4px', marginBottom: '4px'}}/>
-            </div>
+    // <div className="bg-red-600 min-h-screen"> </div>
 
-            <div className="flex-grow flex justify-center">
-              <nav aria-label="Global">
-                <ul className="flex items-center gap-6 text-sm">
-                  <li>
-                    <a className="text-blue-500 transition hover:text-gray-800" href="/products"> Products </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+    <section className="relative bg-[url(https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center bg-no-repeat">
+      {/* <div className="absolute inset-0 bg-red sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div> */}
 
-            <div className="flex items-center gap-4">
-              <div className="sm:flex sm:gap-4">
-                <a
-                  className="rounded-md bg-blue-400 px-5 py-2.5 text-sm font-medium text-white shadow"
-                  href="/login"
-                >
-                  Login
-                </a>
+      <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+        <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+          <h1 className="text-3xl font-extrabold sm:text-5xl">
+            Finding Your Forever Art
+            <strong className="block font-extrabold text-rose-700">
+              {" "}
+              Une Exploration Personnelle des Sensibilités Artistiques.{" "}
+            </strong>
+          </h1>
 
-                <div className="hidden sm:flex">
-                  <a
-                    className="rounded-md bg-blue-400 px-5 py-2.5 text-sm font-medium text-white shadow"
-                    href="/register"
-                  >
-                    Register
-                  </a>
-                </div>
-              </div>
-
-              <div className="block md:hidden">
-                <button 
-                  className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
-                  aria-label="Open menu"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
+          <p className="mt-4 max-w-lg sm:text-xl/relaxed">
+            "Art is the revelation of an exquisite sensitivity.". Cézanne
+          </p>
         </div>
-      </header>
-    </div>
+      </div>
+    </section>
   );
 }
-

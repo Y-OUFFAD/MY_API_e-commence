@@ -7,17 +7,16 @@ services:
     command: python manage.py runserver
     depends_on:
       - db
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      timeout: 20s
+      retries: 10 
     environment:
       - DATABASE_URL=postgresql://root:password@db:5432/db_test
 
   db:
-    image: postgres:latest
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: password
+  
       POSTGRES_DB: db_test
-    volumes:
+      volumes:
       - ./db_scripts:/docker-entrypoint-initdb.d  # Montage du répertoire contenant le script SQLDATABASES = {
     
