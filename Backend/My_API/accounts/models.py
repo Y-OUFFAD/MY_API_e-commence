@@ -1,26 +1,3 @@
-# from django.db import models
-# from django.contrib.auth.models import AbstractBaseUser,PermissionsMixin,BaseUserManager
-
-# class UserProfileManager(BaseUserManager):
-#     def get_by_natural_key(self, email):
-#         return self.get(email=email)
-# # AbstractBaseUser: utilisé User pour l'authentification
-# class User(AbstractBaseUser):
-#     email = models.EmailField(max_length=255, unique=True)
-#     username = models.CharField(max_length=255, unique=True)
-#     password = models.CharField(max_length=255)
-#     is_active = models.BooleanField(default=True)
-#     is_staff = models.BooleanField(default=False)
-#     is_superuser = models.BooleanField(default=False)
-    
-#     # objects = UserProfileManager()
-    
-#     USERNAME_FIELD = 'username'
-#     REQUIRED_FIELDS = ['email']
-
-#     def __str__(self):
-#         return self.email
-
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 
@@ -31,6 +8,7 @@ class UserProfileManager(BaseUserManager):
         """
         if not email:
             raise ValueError('L\'adresse email est obligatoire.')
+        
         if not username:
             raise ValueError('Le nom d\'utilisateur est obligatoire.')
 
