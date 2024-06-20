@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import axios from 'axios';
+import axios from 'axios'; // Importation de la bibly axios pour HTTP
 
 
 
@@ -11,12 +11,13 @@ export default function Login() {
   const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+    event.preventDefault(); 
 
     try {
       const response = await axios.post('http://127.0.0.1:8000/auth/login/', {
         email,
-        password
+        password 
+          //  requête POST avec les données email et password.
       });
 
       if (response.status === 200) {
