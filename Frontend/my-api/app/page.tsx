@@ -16,7 +16,7 @@ export default function Home() {
             Finding Your Forever Art
             <strong className="block font-extrabold text-rose-700">
               {" "}
-              Une Exploration Personnelle des Sensibilités Artistiques.{" "}
+              A Personal Exploration of Artistic Sensibilities.{" "}
             </strong>
           </h1>
 

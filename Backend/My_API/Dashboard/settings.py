@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 from datetime import timedelta
 
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'accounts',
     'product',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +64,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
     'corsheaders.middleware.CorsMiddleware',
-]   'django.middleware.common.CommonMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
 
 ROOT_URLCONF = 'Dashboard.urls'
 
@@ -83,7 +85,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Dashboard.wsgi.application'
+# WSGI_APPLICATION = 'Dashboard.wsgi.application'
 
 
 # Database
@@ -95,7 +97,7 @@ DATABASES = {
         "NAME": "db_test",
         "USER": "root",
         "PASSWORD": "password",
-        "HOST": "127.0.0.1",
+        "HOST": "db",
         "PORT": "3306",
     }
 }

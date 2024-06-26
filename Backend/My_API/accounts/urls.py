@@ -1,7 +1,15 @@
 from django.urls import path
 from . import views
 from .views import  login
-from .views import get_all_users
+from .views import (
+    create_superuser,
+    create_user,
+    register,
+    login,
+    get_all_users,
+    get_user,
+    user_detail
+)
 from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
 
 

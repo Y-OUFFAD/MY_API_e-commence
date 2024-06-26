@@ -4,18 +4,18 @@ import React from 'react';
 
 export default function Products() {
   const products = [
-    { id: 1, image: "/image/tableau1.jpeg", price: "200€" },
-    { id: 2, image: "/image/tableau2.jpeg", price: "200€" },
-    { id: 3, image: "/image/tableau3.jpeg", price: "200€" },
-    { id: 4, image: "/image/tableau4.jpeg", price: "200€" },
-    { id: 5, image: "/image/tableau5.jpeg", price: "200€" },
-    { id: 6, image: "/image/tableau6.jpeg", price: "200€" },
-    { id: 7, image: "/image/tableau7.jpeg", price: "200€" },
-    { id: 8, image: "/image/tableau12.jpeg", price: "200€" },
-    { id: 9, image: "/image/tableau10.jpeg", price: "200€" },
-    { id: 10, image: "/image/tableau13.jpeg", price: "200€" },
-    { id: 11, image: "/image/tableau14.jpeg", price: "200€" },
-    { id: 12, image: "/image/tableau16.jpeg", price: "200€" },
+    { id: 1, image: "/image/tableau1.jpeg", price: "1€" },
+    { id: 2, image: "/image/tableau2.jpeg", price: "1€" },
+    { id: 3, image: "/image/tableau3.jpeg", price: "1€" },
+    { id: 4, image: "/image/tableau4.jpeg", price: "1€" },
+    { id: 5, image: "/image/tableau5.jpeg", price: "1€" },
+    { id: 6, image: "/image/tableau6.jpeg", price: "1€" },
+    { id: 7, image: "/image/tableau7.jpeg", price: "1€" },
+    { id: 8, image: "/image/tableau12.jpeg", price: "1€" },
+    { id: 9, image: "/image/tableau10.jpeg", price: "1€" },
+    { id: 10, image: "/image/tableau13.jpeg", price: "1€" },
+    { id: 11, image: "/image/tableau14.jpeg", price: "1€" },
+    { id: 12, image: "/image/tableau16.jpeg", price: "1€" },
   ];
 
   return (
